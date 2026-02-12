@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from './supabaseClient';
 import { ShoppingBag, Save, Trash2, CheckCircle, Package } from 'lucide-react';
+import localHairImg from './no-image-icon-23494.png';
 
 const PRESET_IMAGES = [
   { id: 1, url: "https://static.wixstatic.com/media/0ca73d_e88b1f7a87ae4334903aa79cdc821413~mv2.jpg/v1/fill/w_317,h_475,al_c,q_85,usm_0.66_1.00_0.01/0ca73d_e88b1f7a87ae4334903aa79cdc821413~mv2.jpg" },
   { id: 2, url: "https://static.wixstatic.com/media/0ca73d_f3a218ba1c8341d9b88a1564405d52a5~mv2.jpg/v1/fill/w_317,h_475,al_c,q_85,usm_0.66_1.00_0.01/0ca73d_f3a218ba1c8341d9b88a1564405d52a5~mv2.jpg" },
   { id: 3, url: "https://static.wixstatic.com/media/0ca73d_0bcb8bc294a3491e98d1cc02ee7ef383~mv2.jpg/v1/fill/w_317,h_475,al_c,q_85,usm_0.66_1.00_0.01/0ca73d_0bcb8bc294a3491e98d1cc02ee7ef383~mv2.jpg" },
   { id: 4, url: "https://static.wixstatic.com/media/0ca73d_50c48bbad0604026adbb8ad2113e96ea~mv2.jpg/v1/fill/w_634,h_950,al_c,q_85,usm_0.66_1.00_0.01/0ca73d_50c48bbad0604026adbb8ad2113e96ea~mv2.jpg" },
-  { id: 5, url: "https://static.wixstatic.com/media/0ca73d_34b3cddf47104ba69baf86e95435ba30~mv2.jpg/v1/fill/w_317,h_475,al_c,q_85,usm_0.66_1.00_0.01/0ca73d_34b3cddf47104ba69baf86e95435ba30~mv2.jpg" }
+  { id: 5, url: "https://static.wixstatic.com/media/0ca73d_34b3cddf47104ba69baf86e95435ba30~mv2.jpg/v1/fill/w_317,h_475,al_c,q_85,usm_0.66_1.00_0.01/0ca73d_34b3cddf47104ba69baf86e95435ba30~mv2.jpg" },
+  { id: 6, url: localHairImg }
 ];
 
 const AVAILABLE_LENGTHS = ["10", "12", "14", "16", "18", "20", "22", "24", "26", "28", "30"];
